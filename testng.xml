@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="false" >
+	 <test name="FlipKartAppTest">
+	   <classes>
+	     <class name="com.pk.AQEAutothon.SearchEngineTest"/>
+	   </classes>
+	 </test> <!-- Test -->
+</suite> <!-- Suite -->
