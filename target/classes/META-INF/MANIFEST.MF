@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: KUPRAVIN
 Build-Jdk: 1.8.0_221
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Built-By: KUPRAVIN
-Build-Jdk: 1.8.0_221
-Created-By: Maven Integration for Eclipse
-
->>>>>>> 2cff7cd9a4f01b5a9748fa6f542471223da31e67
