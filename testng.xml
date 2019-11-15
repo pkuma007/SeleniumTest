@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite" parallel="false" >
 	 <test name="FlipKartAppTest">
@@ -6,3 +7,13 @@
 	   </classes>
 	 </test> <!-- Test -->
 </suite> <!-- Suite -->
+=======
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="false" >
+	 <test name="FlipKartAppTest">
+	   <classes>
+	     <class name="com.pk.AQEAutothon.SearchEngineTest"/>
+	   </classes>
+	 </test> <!-- Test -->
+</suite> <!-- Suite -->
+>>>>>>> 2cff7cd9a4f01b5a9748fa6f542471223da31e67
