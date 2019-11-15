@@ -4,12 +4,8 @@ import com.pk.AQEAutothon.App;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.relevantcodes.extentreports.NetworkMode;
-
 import java.io.File;
 import java.io.IOException;
-
-
 import org.apache.commons.io.FileUtils;
 
 import org.openqa.selenium.By;
@@ -32,8 +28,8 @@ public class SearchEngineTest {
 	
 	@BeforeClass
 	public void beforeClass() throws IOException {
-		report = new ExtentReports("Report/TestReport.html",NetworkMode.OFFLINE);
-		FileUtils.cleanDirectory(new File("Report/Screenshots/")); 
+		report = new ExtentReports("Report/TestReport.html");
+		FileUtils.cleanDirectory(new File("Report/")); 
 		test = report.startTest("SearchEngineTest");
 		//Launch Url: https://www.google.com/
 		driver = a.launchBrowser("CHROME","https://www.google.com/");
