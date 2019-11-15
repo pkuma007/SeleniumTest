@@ -4,13 +4,14 @@ import com.pk.AQEAutothon.App;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.relevantcodes.extentreports.NetworkMode;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
+
+import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +31,9 @@ public class SearchEngineTest {
 	App a = new App();
 	
 	@BeforeClass
-	public void beforeClass() {
-		report = new ExtentReports("Report/TestReport.html");
+	public void beforeClass() throws IOException {
+		report = new ExtentReports("Report/TestReport.html",NetworkMode.OFFLINE);
+		FileUtils.cleanDirectory(new File("Report/Screenshots/")); 
 		test = report.startTest("SearchEngineTest");
 		//Launch Url: https://www.google.com/
 		driver = a.launchBrowser("CHROME","https://www.google.com/");

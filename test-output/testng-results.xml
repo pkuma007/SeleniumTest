@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11481" started-at="2019-11-14T21:59:36 IST" finished-at="2019-11-14T21:59:47 IST">
+  <suite name="Default suite" duration-ms="20761" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:52:00 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11481" started-at="2019-11-14T21:59:36 IST" finished-at="2019-11-14T21:59:47 IST">
+    <test name="Default test" duration-ms="20761" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:52:00 IST">
       <class name="com.pk.AQEAutothon.SearchEngineTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="beforeClass" is-config="true" duration-ms="8669" started-at="2019-11-14T21:59:36 IST" finished-at="2019-11-14T21:59:44 IST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="beforeClass" is-config="true" duration-ms="7914" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:51:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="googleSearchEngineTest()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="googleSearchEngineTest" duration-ms="1614" started-at="2019-11-14T21:59:44 IST" finished-at="2019-11-14T21:59:46 IST">
+        <test-method status="PASS" signature="googleSearchEngineTest()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="googleSearchEngineTest" duration-ms="11743" started-at="2019-11-15T18:51:47 IST" finished-at="2019-11-15T18:51:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleSearchEngineTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="afterClass" is-config="true" duration-ms="1144" started-at="2019-11-14T21:59:46 IST" finished-at="2019-11-14T21:59:47 IST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="afterClass" is-config="true" duration-ms="1065" started-at="2019-11-15T18:51:59 IST" finished-at="2019-11-15T18:52:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
