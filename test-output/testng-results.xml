@@ -1,21 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20761" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:52:00 IST">
+  <suite name="Default suite" duration-ms="1128" started-at="2022-03-01T01:05:47 IST" finished-at="2022-03-01T01:05:48 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20761" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:52:00 IST">
+    <test name="Default test" duration-ms="1128" started-at="2022-03-01T01:05:47 IST" finished-at="2022-03-01T01:05:48 IST">
       <class name="com.pk.AQEAutothon.SearchEngineTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="beforeClass" is-config="true" duration-ms="7914" started-at="2019-11-15T18:51:39 IST" finished-at="2019-11-15T18:51:47 IST">
+        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@4d41cee]" name="beforeClass" is-config="true" duration-ms="1101" started-at="2022-03-01T01:05:47 IST" finished-at="2022-03-01T01:05:48 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7J8G5CG', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00BA87E3+2852835]
+Ordinal0 [0x00A95BB1+1727409]
+Ordinal0 [0x0096E4B9+517305]
+Ordinal0 [0x008FCA98+51864]
+Ordinal0 [0x0091D9F7+186871]
+Ordinal0 [0x0091D7FD+186365]
+Ordinal0 [0x0091B70B+177931]
+Ordinal0 [0x00902584+75140]
+Ordinal0 [0x00903650+79440]
+Ordinal0 [0x009035E9+79337]
+Ordinal0 [0x00AAAD5C+1813852]
+GetHandleVerifier [0x00CCC616+1075574]
+GetHandleVerifier [0x00CCC367+1074887]
+GetHandleVerifier [0x00CD7497+1120247]
+GetHandleVerifier [0x00CCCC16+1077110]
+Ordinal0 [0x00AA3206+1782278]
+Ordinal0 [0x00AAC3BB+1819579]
+Ordinal0 [0x00AAC523+1819939]
+Ordinal0 [0x00AC2B45+1911621]
+BaseThreadInitThunk [0x76536739+25]
+RtlGetFullPathName_UEx [0x77DE8E7F+1215]
+RtlGetFullPathName_UEx [0x77DE8E4D+1165]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7J8G5CG', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00BA87E3+2852835]
+Ordinal0 [0x00A95BB1+1727409]
+Ordinal0 [0x0096E4B9+517305]
+Ordinal0 [0x008FCA98+51864]
+Ordinal0 [0x0091D9F7+186871]
+Ordinal0 [0x0091D7FD+186365]
+Ordinal0 [0x0091B70B+177931]
+Ordinal0 [0x00902584+75140]
+Ordinal0 [0x00903650+79440]
+Ordinal0 [0x009035E9+79337]
+Ordinal0 [0x00AAAD5C+1813852]
+GetHandleVerifier [0x00CCC616+1075574]
+GetHandleVerifier [0x00CCC367+1074887]
+GetHandleVerifier [0x00CD7497+1120247]
+GetHandleVerifier [0x00CCCC16+1077110]
+Ordinal0 [0x00AA3206+1782278]
+Ordinal0 [0x00AAC3BB+1819579]
+Ordinal0 [0x00AAC523+1819939]
+Ordinal0 [0x00AC2B45+1911621]
+BaseThreadInitThunk [0x76536739+25]
+RtlGetFullPathName_UEx [0x77DE8E7F+1215]
+RtlGetFullPathName_UEx [0x77DE8E4D+1165]
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.pk.AQEAutothon.App.launchBrowser(App.java:46)
+at com.pk.AQEAutothon.SearchEngineTest.beforeClass(SearchEngineTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="googleSearchEngineTest()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="googleSearchEngineTest" duration-ms="11743" started-at="2019-11-15T18:51:47 IST" finished-at="2019-11-15T18:51:59 IST">
+        <test-method status="SKIP" signature="googleSearchEngineTest()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@4d41cee]" name="googleSearchEngineTest" duration-ms="0" started-at="2022-03-01T01:05:48 IST" finished-at="2022-03-01T01:05:48 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7J8G5CG', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00BA87E3+2852835]
+Ordinal0 [0x00A95BB1+1727409]
+Ordinal0 [0x0096E4B9+517305]
+Ordinal0 [0x008FCA98+51864]
+Ordinal0 [0x0091D9F7+186871]
+Ordinal0 [0x0091D7FD+186365]
+Ordinal0 [0x0091B70B+177931]
+Ordinal0 [0x00902584+75140]
+Ordinal0 [0x00903650+79440]
+Ordinal0 [0x009035E9+79337]
+Ordinal0 [0x00AAAD5C+1813852]
+GetHandleVerifier [0x00CCC616+1075574]
+GetHandleVerifier [0x00CCC367+1074887]
+GetHandleVerifier [0x00CD7497+1120247]
+GetHandleVerifier [0x00CCCC16+1077110]
+Ordinal0 [0x00AA3206+1782278]
+Ordinal0 [0x00AAC3BB+1819579]
+Ordinal0 [0x00AAC523+1819939]
+Ordinal0 [0x00AC2B45+1911621]
+BaseThreadInitThunk [0x76536739+25]
+RtlGetFullPathName_UEx [0x77DE8E7F+1215]
+RtlGetFullPathName_UEx [0x77DE8E4D+1165]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7J8G5CG', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x00BA87E3+2852835]
+Ordinal0 [0x00A95BB1+1727409]
+Ordinal0 [0x0096E4B9+517305]
+Ordinal0 [0x008FCA98+51864]
+Ordinal0 [0x0091D9F7+186871]
+Ordinal0 [0x0091D7FD+186365]
+Ordinal0 [0x0091B70B+177931]
+Ordinal0 [0x00902584+75140]
+Ordinal0 [0x00903650+79440]
+Ordinal0 [0x009035E9+79337]
+Ordinal0 [0x00AAAD5C+1813852]
+GetHandleVerifier [0x00CCC616+1075574]
+GetHandleVerifier [0x00CCC367+1074887]
+GetHandleVerifier [0x00CD7497+1120247]
+GetHandleVerifier [0x00CCCC16+1077110]
+Ordinal0 [0x00AA3206+1782278]
+Ordinal0 [0x00AAC3BB+1819579]
+Ordinal0 [0x00AAC523+1819939]
+Ordinal0 [0x00AC2B45+1911621]
+BaseThreadInitThunk [0x76536739+25]
+RtlGetFullPathName_UEx [0x77DE8E7F+1215]
+RtlGetFullPathName_UEx [0x77DE8E4D+1165]
+
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.pk.AQEAutothon.App.launchBrowser(App.java:46)
+at com.pk.AQEAutothon.SearchEngineTest.beforeClass(SearchEngineTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleSearchEngineTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@5a1c0542]" name="afterClass" is-config="true" duration-ms="1065" started-at="2019-11-15T18:51:59 IST" finished-at="2019-11-15T18:52:00 IST">
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.pk.AQEAutothon.SearchEngineTest@4d41cee]" name="afterClass" is-config="true" duration-ms="-1646076948821" started-at="2022-03-01T01:05:48 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

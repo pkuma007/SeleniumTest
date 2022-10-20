@@ -28,6 +28,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
@@ -42,7 +43,14 @@ public class App
 	public  WebDriver launchBrowser(String browserType, String url) {
 		WebDriver driver=null;
 		if(browserType.equals("CHROME")) {
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.firefoxdriver().setup();
+//			WebDriverManager.iedriver().setup();
+//			WebDriverManager.edgedriver().setup();
+//			WebDriverManager.operadriver().setup();
+//			WebDriverManager.phantomjs().setup();
 			driver = new ChromeDriver();
 		}else if(browserType.equals("FIREFOX"))  {
 			System.setProperty("webdriver.firefox.driver", "geckodriver.exe");
@@ -87,6 +95,7 @@ public class App
 				URL appium_url = new URL("http://127.0.0.1:4723/wd/hub");
 				// Create object of  AndroidDriver class and pass the url and capability that we created
 				driver = new AppiumDriver(appium_url, capabilities);
+				driver = new AndroidDriver(appium_url, capabilities);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 				return driver;
 			} catch (Exception e) {

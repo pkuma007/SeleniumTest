@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.pk</groupId>
-  <artifactId>AQEAutothon</artifactId>
+  <artifactId>SeleniumTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -35,18 +35,7 @@
 	    <artifactId>selenium-java</artifactId>
 	    <version>3.141.59</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-firefox-driver</artifactId>
-	    <version>3.141.59</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-chrome-driver</artifactId>
-	    <version>3.141.59</version>
-	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 	<dependency>
 	    <groupId>org.apache.poi</groupId>
@@ -67,11 +56,11 @@
 	    <scope>test</scope>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-	<dependency>
+	<!-- <dependency>
 	    <groupId>commons-io</groupId>
 	    <artifactId>commons-io</artifactId>
 	    <version>2.6</version>
-	</dependency>
+	</dependency> -->
 	<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 	<dependency>
 	    <groupId>io.appium</groupId>
@@ -84,7 +73,13 @@
 	    <artifactId>extentreports</artifactId>
 	    <version>2.41.2</version>
 	</dependency>
-			
+	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+	<dependency>
+	    <groupId>io.github.bonigarcia</groupId>
+	    <artifactId>webdrivermanager</artifactId>
+	    <version>5.3.0</version>
+	</dependency>
+	
   </dependencies>
   <build>
 	  <plugins>
@@ -111,11 +106,13 @@
 		 <plugin>
 			<groupId>ch.fortysix</groupId>
 			<artifactId>maven-postman-plugin</artifactId>
+			 <version>0.1.6</version>
 			<executions>
 				<execution>
 				
 				<id>Test Report</id>
-				<phase>test</phase>
+				<!-- <phase>test</phase> -->
+				<phase>none</phase>
 				<goals>
 				<goal>send-mail</goal>
 				</goals>
@@ -123,7 +120,7 @@
 				
 				<configuration>
 					<!-- From Email address -->
-					<from>Kupravin@amdocs.com</from>
+					<from>Kupravin@gmail.com</from>
 					
 					<!--  Email subject -->
 					<subject>Test Automation Report</subject>
@@ -131,7 +128,7 @@
 					<!-- Fail the build if the mail doesnt reach -->
 					
 					<!-- host -->
-					<mailhost>punemail.corp.amdocs.com</mailhost>
+					<mailhost>mail@gmail.com</mailhost>
 					<!-- port of the host -->
 					<mailport>25</mailport>
 					<!-- <mailssl>true</mailssl>

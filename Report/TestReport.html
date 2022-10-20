@@ -3,14 +3,12 @@
 <html>
 	<head>
 		<!--
-			ExtentReports Library 2.41.0 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+			ExtentReports Library 2.41.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
 			Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
 			Documentation: http://extentreports.relevantcodes.com 
 		-->
 
-		<extent id='e6b3b34d-6f0f-4e57-9f99-90a0080063fb' />
-		
-		<meta http-equiv='content-type' content='text/html; charset=UTF-8' /> 
+		<meta charset='UTF-8' /> 
 		<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
 		<meta name='robots' content='noodp, noydir' />
 		<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -19,8 +17,10 @@
 		<title>
 				ExtentReports 2.0
 		</title>
+		
+		
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
-		<link href='./extentreports/css/css.css' type='text/css' rel='stylesheet' />
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.css' type='text/css' rel='stylesheet' />
 		
 		<style>
 				
@@ -32,32 +32,31 @@
 	</head>
 	
 	
-	<body class='extent standard hide-overflow'>
+	<body class='extent default standard hide-overflow'>
 		<!-- nav -->
 		<nav>
-			<div class='logo-container'>
+			<div class='logo-container blue darken-2'>
 				<a class='logo-content' href='http://extentreports.relevantcodes.com'>
 					<span>ExtentReports</span>
 				</a>
-				<a href='#' data-activates='slide-out' class='button-collapse'><i class='fa fa-bars'></i></a>
+				<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
 			</div>
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
-				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='fa fa-tasks'></i>Test Details</a></li>
-				<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='fa fa-tags'></i>Categories</a></li>
-				<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='fa fa-bug'></i>Exceptions</a></li>
-				<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='fa fa-dashboard'></i></i>Analysis</a></li>				
-				<li class='analysis waves-effect'><a href='#!' class='testrunner-logs-view'><i class='fa fa-file-text-o'></i>TestRunner Logs</a></li>
+				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+				<li class='analysis waves-effect'>
+					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
+				</li>
 			</ul>
 			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
 			<ul class='right hide-on-med-and-down nav-right'>
 				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
-					<i class='fa fa-desktop'></i>
+					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2019-11-15 18:51:59</span>
+					<span class='suite-started-time'>2022-10-20 21:50:11</span>
 				</li>
 				<li>
-					<span>v2.41.0</span>
+					<span>v2.41.1</span>
 				</li>
 			</ul>
 		</nav>
@@ -84,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 19s+825ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 13s+406ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 19s+825ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 13s+406ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
-						<div class='card green-accent'> 
+						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2019-11-15 18:51:39</span> 
+							<span class='panel-lead suite-started-time'>2022-10-20 21:49:58</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
-						<div class='card pink-accent'> 
+						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2019-11-15 18:51:59</span> 
+							<span class='panel-lead suite-ended-time'>2022-10-20 21:50:11</span> 
 						</div> 
 					</div>
 				</div>
@@ -113,7 +112,7 @@
 								<span class='panel-name'>Tests View</span>
 							</div> 
 							<div class='panel-setting modal-trigger test-count-setting right'>
-								<a href='#test-count-setting'><i class='fa fa-ellipsis-v'></i></a>
+								<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
 							</div> 
 							<div class='chart-box'>
 								<canvas class='text-centered' id='test-analysis'></canvas>
@@ -132,7 +131,7 @@
 								<span class='panel-name'>Steps View</span>
 							</div> 
 							<div class='panel-setting modal-trigger step-status-filter right'>
-								<a href='#step-status-filter'><i class='fa fa-ellipsis-v'></i></a>
+								<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
 							</div> 
 							<div class='chart-box'>
 								<canvas class='text-centered' id='step-analysis'></canvas>
@@ -169,7 +168,7 @@
 								<tbody>
 										<tr>
 											<td>User Name</td>
-											<td>KUPRAVIN</td>
+											<td>PRAVIN</td>
 										</tr>
 										<tr>
 											<td>OS</td>
@@ -177,11 +176,11 @@
 										</tr>
 										<tr>
 											<td>Java Version</td>
-											<td>1.8.0_221</td>
+											<td>1.8.0_281</td>
 										</tr>
 										<tr>
 											<td>Host Name</td>
-											<td>kupravin01</td>
+											<td>JHABLU-7J8G5CG</td>
 										</tr>
 								</tbody>
 							</table>
@@ -200,7 +199,9 @@
 						</div>
 						<div class='card-panel filters'>
 							<div>
-								<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='fa fa-list icon'></i></a>
+								<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+									<i class='mdi-action-reorder'></i>
+								</a>
 								<ul id='tests-toggle' class='dropdown-content'>
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
@@ -210,37 +211,43 @@
 								</ul>
 							</div>
 							<div>
-								<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='fa fa-close icon'></i></a>
-							</div>
-							<div>&nbsp;&middot;&nbsp;</div>
-							<div>
-								<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='fa fa-pie-chart icon'></i></a>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+									<i class='mdi-navigation-close'></i>
+								</a>
 							</div>
 							<div>
-								<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='fa fa-refresh icon'></i></i></a>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+									<i class='mdi-action-track-changes'></i>
+								</a>
 							</div>
-							<div>&nbsp;&middot;</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light blue enabled' id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters'>
+									<i class='mdi-navigation-refresh'></i>
+								</a>
+							</div>
 							<div class='search' alt='Search Tests' title='Search Tests'>
 								<div class='input-field left'>
 									<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
 								</div>
-								<i class='fa fa-search icon'></i>
+								<a href="#" class='btn-floating btn-small waves-effect waves-light grey'>
+									<i class='mdi-action-search'></i>
+								</a>
 							</div>
 						</div>
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='a7cdced4-aadd-44a5-861a-3f3e58ef906a'>
+										<li class='collection-item test displayed active pass ' extentid='110a3055-1c18-4406-b461-91f9bb46c1c5'>
 											<div class='test-head'>
 												<span class='test-name'>SearchEngineTest </span>
-												<span class='test-status label right capitalize outline pass'>pass</span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2019-11-15 18:51:40</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2019-11-15 18:51:59</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 19s+391ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2022-10-20 21:49:58</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2022-10-20 21:50:11</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+59ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -256,44 +263,44 @@
 														</thead>
 														<tbody>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:48</td>
-																	<td class='step-details'><a href='Screenshots\1573824108201.png' data-featherlight='image'><img class='report-img' src='Screenshots\1573824108201.png' /></a>Google Home is launched</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:01</td>
+																	<td class='step-details'><a href='Screenshots\1666282801363.png' data-featherlight='image'><img class='report-img' src='Screenshots\1666282801363.png' /></a>Google Home is launched</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:55</td>
-																	<td class='step-details'><a href='Screenshots\1573824115715.png' data-featherlight='image'><img class='report-img' src='Screenshots\1573824115715.png' /></a>Virat Kohli Wiki searched successfully</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:08</td>
+																	<td class='step-details'><a href='Screenshots\1666282808826.png' data-featherlight='image'><img class='report-img' src='Screenshots\1666282808826.png' /></a>Virat Kohli Wiki searched successfully</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:58</td>
-																	<td class='step-details'><a href='Screenshots\1573824118338.png' data-featherlight='image'><img class='report-img' src='Screenshots\1573824118338.png' /></a> Virat Kohli Wiki Page opened successfully</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:10</td>
+																	<td class='step-details'><a href='Screenshots\1666282810405.png' data-featherlight='image'><img class='report-img' src='Screenshots\1666282810405.png' /></a> Virat Kohli Wiki Page opened successfully</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:58</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:10</td>
 																	<td class='step-details'>| Competition | Test | ODI | T20I</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:58</td>
-																	<td class='step-details'>| Matches | 239 | 71 | 109</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:10</td>
+																	<td class='step-details'>| Matches | 262 | 109 | 134</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:58</td>
-																	<td class='step-details'>| Runs scored | 11,520 | 2,441 | 8,862</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:10</td>
+																	<td class='step-details'>| Runs scored | 12,344 | 3,712 | 10,323</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:59</td>
-																	<td class='step-details'>| Batting average | 60.31 | 50.00 | 54.03</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:11</td>
+																	<td class='step-details'>| Batting average | 57.68 | 50.84 | 50.60</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='fa fa-fa fa-check-circle-o'></i></td>
-																	<td class='timestamp'>18:51:59</td>
-																	<td class='step-details'><a href='Screenshots\1573824119482.png' data-featherlight='image'><img class='report-img' src='Screenshots\1573824119482.png' /></a>Search Engine Test Completed</td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:50:11</td>
+																	<td class='step-details'><a href='Screenshots\1666282811508.png' data-featherlight='image'><img class='report-img' src='Screenshots\1666282811508.png' /></a>Search Engine Test Completed</td>
 																</tr>
 														</tbody>
 													</table>
@@ -312,14 +319,14 @@
 						<div class='card-panel details-view'>
 							<h5 class='details-name'></h5>
 							<div class='step-filters right'>
-								<span class='info' status="info" alt='info' title='info'> <i class='fa fa-info-circle'></i></span>
-								<span class='pass' alt='pass' title='pass'><i class='fa fa-check-circle-o'></i></span>
-								<span class='fail' alt='fail' title='fail'><i class='fa fa-times-circle-o'></i></span>
-								<span class='fatal' alt='fatal' title='fatal'><i class='fa fa-times-circle-o'></i></span>
-								<span class='error' alt='error' title='error'><i class='fa fa-exclamation-circle'></i></span>
-								<span class='warning' alt='warning' title='warning'><i class='fa fa-warning'></i></span>
-								<span class='skip' alt='skip' title='skip'><i class='fa fa-chevron-circle-right'></i></span>
-								<span class='clear-step-filter' alt='Clear filters' title='Clear filters'><i class='fa fa-times'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light blue' status='info' alt='info' title='info'><i class='mdi-action-info-outline'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light green' status='pass' alt='pass' title='pass'><i class='mdi-action-check-circle'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red' status='fail' alt='fail' title='fail'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red darken-4' status='fatal' alt='fatal' title='fatal'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red lighten-2' status='error' alt='error' title='error'><i class='mdi-alert-error'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light orange' alt='warning' status='warning' title='warning'><i class='mdi-alert-warning'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light cyan' status='skip' alt='skip' title='skip'><i class='mdi-content-redo'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light grey darken-2' status='clear-step-filter' alt='Clear filters' title='Clear filters'><i class='mdi-content-clear'></i></span>
 							</div>
 							<div class='details-container'>
 							</div>
@@ -394,9 +401,9 @@
 		</div>
 		<!-- /filter for step status -->
 		
-		<script type='text/javascript' src='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.js'></script>	
-		
-		<script>jQuery(document).ready(function() { jQuery('.logo span').html('ExtentReports'); });</script>
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.js' type='text/javascript'></script>
+
+		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
 		<script>
 				
             
