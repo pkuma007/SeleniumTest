@@ -1,11 +1,12 @@
 package com.pk.AQEAutothon;
 
-import com.pk.AQEAutothon.App;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+
 import org.apache.commons.io.FileUtils;
 
 import org.openqa.selenium.By;
@@ -25,7 +26,7 @@ public class SearchEngineTest {
 	static ExtentReports report;
 	WebDriverWait wait;
 	App a = new App();
-	
+
 	@BeforeClass
 	public void beforeClass() throws IOException {
 		report = new ExtentReports("Report/TestReport.html");
@@ -33,12 +34,12 @@ public class SearchEngineTest {
 		test = report.startTest("SearchEngineTest");
 		//Launch Url: https://www.google.com/
 		driver = a.launchBrowser("CHROME","https://www.google.com/");
-		wait = new WebDriverWait(driver, 50);
+		wait = new WebDriverWait(driver, Duration.ofMinutes(50));
 		
 	}	
 	
 	@Test
-	void googleSearchEngineTest() throws IOException, InterruptedException {
+	void googleSearchEngineTest() throws IOException {
 		try {
 			
 		String searchStr="Virat Kohli Wiki";
@@ -69,7 +70,7 @@ public class SearchEngineTest {
 			String tr = "";
 			for (int j=1; j<=4;j++)                    
 			{  
-				WebElement val= null;
+				WebElement val;
 				if(i==1 || j ==1) {
 					val= driver.findElement(By.xpath("//th[text()='Career statistics']/../following::table[1]/tbody/tr["+i+"]/th["+j+"]"));
 				}else {

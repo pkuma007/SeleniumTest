@@ -1,11 +1,11 @@
 package com.pk.AQEAutothon;
 
-import com.pk.AQEAutothon.App;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,10 +36,10 @@ public class FlipKartApp {
 		Thread.sleep(5000);
 		test.log(LogStatus.PASS,test.addScreenCapture(App.takeScreenShot(driver))+ "Flipkart App is launched");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 50);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(50));
 		try {
 			WebElement backbutton = driver.findElement(By.xpath("//*[@resource-id='com.flipkart.android:id/custom_back_icon']"));
-			if(backbutton != null) backbutton.click();
+            backbutton.click();
 		}catch(Exception e) {
 			test.log(LogStatus.FAIL,test.addScreenCapture(App.takeScreenShot(driver))+ "Flipkart Home Page not launched");
 			return;
@@ -87,10 +87,10 @@ public class FlipKartApp {
 			Thread.sleep(5000);
 			//SKIP & GO TO CART
 			WebElement SkipGoToCart = driver.findElement(By.xpath("*//android.widget.ImageButton[@resource-id='' and @text='']"));
-			if(SkipGoToCart != null) SkipGoToCart.click();
+            SkipGoToCart.click();
 			
 			WebElement GoToCart = driver.findElement(By.xpath("//*[@text='GO TO CART']"));
-			if(GoToCart != null) GoToCart.click();
+            GoToCart.click();
 		}catch(Exception e) {
 			test.log(LogStatus.FAIL,test.addScreenCapture(App.takeScreenShot(driver))+ "Failed to Add into cart");
 			return;

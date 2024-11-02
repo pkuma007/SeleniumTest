@@ -3,7 +3,6 @@ package com.pk.AQEAutothon;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -21,9 +20,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -42,72 +39,78 @@ public class App
 	//Launching Browser based on conditions
 	public  WebDriver launchBrowser(String browserType, String url) {
 		WebDriver driver=null;
-		if(browserType.equals("CHROME")) {
-			//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			WebDriverManager.chromedriver().setup();
+        switch (browserType) {
+            case "CHROME":
+                //System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+                WebDriverManager.chromedriver().clearDriverCache().setup();
 //			WebDriverManager.chromedriver().setup();
 //			WebDriverManager.firefoxdriver().setup();
 //			WebDriverManager.iedriver().setup();
 //			WebDriverManager.edgedriver().setup();
 //			WebDriverManager.operadriver().setup();
 //			WebDriverManager.phantomjs().setup();
-			driver = new ChromeDriver();
-		}else if(browserType.equals("FIREFOX"))  {
-			System.setProperty("webdriver.firefox.driver", "geckodriver.exe");
-			Proxy proxy = new Proxy();
-		    proxy.setProxyType(Proxy.ProxyType.AUTODETECT);
-		    FirefoxOptions options = new FirefoxOptions();
-		    options.setProxy(proxy);
-			driver = new FirefoxDriver(options);
-		}else if(browserType.equals("ANDROID_APP")) {
-			try {
-				DesiredCapabilities capabilities = new DesiredCapabilities();
-				// set the capability to execute test in chrome browser
-				//capabilities.setCapability(MobileCapabilityType.BROWSER_NAME,BrowserType.CHROME);
-				// set the capability to execute our test in Android Platform
-				// we need to define platform name
-				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-				// Set the device name as well (you can give any name)
-				capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"MyPhone");
-				//Automation MAe for appium
-				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator1");
-				//Device ID
-				capabilities.setCapability(MobileCapabilityType.UDID,"0837fef4252c056e");
-				//ANDROID Version
-				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"6.0.1");
-				
-				capabilities.setCapability("newCommandTimeout",90000);
-				
-				capabilities.setCapability("autoGrantPermissions",true);
-				capabilities.setCapability("noReset",false);
+                driver = new ChromeDriver();
+                break;
+            case "FIREFOX":
+                System.setProperty("webdriver.firefox.driver", "geckodriver.exe");
+                Proxy proxy = new Proxy();
+                proxy.setProxyType(Proxy.ProxyType.AUTODETECT);
+                FirefoxOptions options = new FirefoxOptions();
+                options.setProxy(proxy);
+                driver = new FirefoxDriver(options);
+                break;
+            case "ANDROID_APP":
+                try {
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    // set the capability to execute test in chrome browser
+                    //capabilities.setCapability(MobileCapabilityType.BROWSER_NAME,BrowserType.CHROME);
+                    // set the capability to execute our test in Android Platform
+                    // we need to define platform name
+                    capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+                    // Set the device name as well (you can give any name)
+                    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "MyPhone");
+                    //Automation MAe for appium
+                    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator1");
+                    //Device ID
+                    capabilities.setCapability(MobileCapabilityType.UDID, "0837fef4252c056e");
+                    //ANDROID Version
+                    capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0.1");
 
-				capabilities.setCapability("appPackage","com.flipkart.android");
-				capabilities.setCapability("appActivity","com.flipkart.android.activity.HomeFragmentHolderActivity");
-				capabilities.setCapability("appWaitPackage","com.flipkart.android");
-				capabilities.setCapability("appWaitActivity","com.flipkart.android.activity.HomeFragmentHolderActivity");
-				 
-				
-				// Skip the installation of io.appium.settings app and the UIAutomator 2 server.
-				capabilities.setCapability("skipDeviceInitialization", true);
-				capabilities.setCapability("skipServerInstallation", true);
-				
-				// Create object of URL class and specify the appium server address
-				URL appium_url = new URL("http://127.0.0.1:4723/wd/hub");
-				// Create object of  AndroidDriver class and pass the url and capability that we created
-				driver = new AppiumDriver(appium_url, capabilities);
-				driver = new AndroidDriver(appium_url, capabilities);
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
-				return driver;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}else {
-			System.out.println("Please provide correct Driver browserType to launch");
-		}
-		driver.manage().window().maximize();
+                    capabilities.setCapability("newCommandTimeout", 90000);
+
+                    capabilities.setCapability("autoGrantPermissions", true);
+                    capabilities.setCapability("noReset", false);
+
+                    capabilities.setCapability("appPackage", "com.flipkart.android");
+                    capabilities.setCapability("appActivity", "com.flipkart.android.activity.HomeFragmentHolderActivity");
+                    capabilities.setCapability("appWaitPackage", "com.flipkart.android");
+                    capabilities.setCapability("appWaitActivity", "com.flipkart.android.activity.HomeFragmentHolderActivity");
+
+
+                    // Skip the installation of io.appium.settings app and the UIAutomator 2 server.
+                    capabilities.setCapability("skipDeviceInitialization", true);
+                    capabilities.setCapability("skipServerInstallation", true);
+
+                    // Create object of URL class and specify the appium server address
+                    URL appium_url = new URL("http://127.0.0.1:4723/wd/hub");
+                    // Create object of  AndroidDriver class and pass the url and capability that we created
+                    driver = new AppiumDriver<>(appium_url, capabilities);
+                    driver = new AndroidDriver<>(appium_url, capabilities);
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    return driver;
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                System.out.println("Please provide correct Driver browserType to launch");
+                break;
+        }
+        assert driver != null;
+        driver.manage().window().maximize();
 		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 	}
     
